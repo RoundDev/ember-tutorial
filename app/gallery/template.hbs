@@ -1,0 +1,17 @@
+{{outlet}}
+<div class="container-fluid">
+  <h2 class="text-center text-uppercase">Gallery page</h2><hr />
+
+  <div class="col-lg-3"></div>
+
+  <div class="well well-lg col-lg-6">
+    <!--Components must have a dash in their name. So blog-post is an acceptable name, but post is not. This prevents
+    clashes with current or future HTML element names, and ensures Ember picks up the components automatically.-->
+    {{#each model as |image|}}
+      {{gallery-image file=image}}
+    {{/each}}
+  </div>
+
+  <div class="col-lg-3"></div>
+
+</div>
